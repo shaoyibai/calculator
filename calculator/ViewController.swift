@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBAction private func typekey(sender: UIButton) {
         let digit = sender.currentTitle!
-        print("this is \(digit)")
+        
         if userInTheMiddleOfInput
         {
             display.text = display.text! + digit
