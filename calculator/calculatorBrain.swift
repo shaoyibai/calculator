@@ -12,8 +12,11 @@ class calculaterBrain
 {
     
     private var accumlator = 0.0
+    private var internalProgram = [AnyObject]()
+    
     func setOperation(operand : Double) {
         accumlator = operand
+        internalProgram.append(operand)
     }
     
     private var operations: Dictionary<String, Operation> = [
@@ -38,6 +41,7 @@ class calculaterBrain
     }
     
     func performaOperation(symbol :String) {
+        internalProgram.append(symbol)
         if let operation = operations[symbol] {
             switch operation{
             case .Constant (let value):
@@ -70,6 +74,32 @@ class calculaterBrain
         var firstOperand : Double
     }
     
+    typealias PropertyList = AnyObject
+    
+    var program: PropertyList {
+        get {
+            return internalProgram
+        }
+        set {
+            clear()
+            if let arrayOfOps = newValue as? [AnyObject]{
+                for op in arrayOfOps {
+                    if let operand = op as? Double {
+                       setOperation(operand)
+                    } else if let operation = op as? String {
+                        performaOperation(operation)
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    func clear() {
+        accumlator = 0.0
+        pending = nil
+        internalProgram.removeAll()
+    }
     var result: Double {
         get {
             return accumlator

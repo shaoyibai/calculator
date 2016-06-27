@@ -37,6 +37,19 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction private func save()
+    {
+        savedProgram = brain.program
+    }
+    
+    @IBAction private func restore() {
+        if savedProgram != nil {
+            brain.program = savedProgram!
+            displayValue = brain.result
+        }
+    }
+    private var savedProgram: calculaterBrain.PropertyList?
+    
     private var brain = calculaterBrain()
     
     @IBAction private func pieButton(sender: UIButton) {

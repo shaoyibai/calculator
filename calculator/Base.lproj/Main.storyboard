@@ -161,9 +161,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="133" height="93"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                        <state key="normal" title="e"/>
+                                                        <state key="normal" title="save"/>
                                                         <connections>
-                                                            <action selector="pieButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0La-xm-eaX"/>
+                                                            <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRd-jb-Fvy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-Lk-9ct">
@@ -202,9 +202,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="133" height="92"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                        <state key="normal" title="cos"/>
+                                                        <state key="normal" title="restore"/>
                                                         <connections>
-                                                            <action selector="pieButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xg-ik-bi6"/>
+                                                            <action selector="restore" destination="BYZ-38-t0r" eventType="touchUpInside" id="59G-C5-HOP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhK-dS-CQx">
